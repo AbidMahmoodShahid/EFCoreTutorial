@@ -1,4 +1,5 @@
-﻿using EFCoreTutorial.Models.ModelsUsingConvention.FullyDefinedNavigationProperty;
+﻿using EFCoreTutorial.Configurations;
+using EFCoreTutorial.Models.ModelsUsingConvention.FullyDefinedNavigationProperty;
 using EFCoreTutorial.Models.ModelsUsingConvention.NoNavigationPropertyWithFK;
 using EFCoreTutorial.Models.ModelsUsingConvention.SingleCollectionNavigationProperty;
 using EFCoreTutorial.Models.ModelsUsingConvention.SingleCollectionNavigationPropertyWithFK;
@@ -13,6 +14,12 @@ namespace EFCoreTutorial
         public DbSet<FDNP_Process_CC> FDNP_Process_CC { get; set; }
         public DbSet<FDNP_Group_CC> FDNP_Group_CC { get; set; }
         public DbSet<FDNP_Point_CC> FDNP_Point_CC { get; set; }
+        public DbSet<FDNP_Blog_CC> FDNP_Blog_CC { get; set; }
+        public DbSet<FDNP_Post_CC> FDNP_Post_CC { get; set; }
+        public DbSet<FDNP_Tag_CC> FDNP_Tag_CC { get; set; }
+        //public DbSet<FDNP_PostTag_CC> FDNP_PostTag_CC { get; set; }
+        public DbSet<FDNP_Blogger_CC> FDNP_Blogger_CC { get; set; }
+        public DbSet<FDNP_Address_CC> FDNP_Address_CC { get; set; }
 
         public DbSet<NNPFK_Process_CC> NNPFK_Process_CC { get; set; }
         public DbSet<NNPFK_Group_CC> NNPFK_Group_CC { get; set; }
@@ -46,7 +53,7 @@ namespace EFCoreTutorial
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            FDNP_CC_Configuration.SetFDNP_CC_Configuration(modelBuilder);
         }
 
     }

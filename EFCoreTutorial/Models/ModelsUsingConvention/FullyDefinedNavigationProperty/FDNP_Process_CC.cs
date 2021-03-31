@@ -11,8 +11,21 @@ namespace EFCoreTutorial.Models.ModelsUsingConvention.FullyDefinedNavigationProp
 
         public string Name { get; set; }
 
+
+        #region Group_CC
+
         //Collection Navigation Property(OneToMany)
         public List<FDNP_Group_CC> GroupList { get; set; }
+
+        #endregion
+
+        #region Blog_CC
+
+        //Reference Navigation Property(OneToOne)
+        public FDNP_Blog_CC FDNP_Blog_CC { get; set; }
+
+        #endregion
+
 
         public FDNP_Process_CC(string processname)
         {

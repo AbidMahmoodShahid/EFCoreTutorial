@@ -10,7 +10,7 @@ namespace EFCoreTutorial.Models.ModelsUsingConvention.FullyDefinedNavigationProp
         public string Name { get; set; }
 
 
-
+        #region Group_CC
 
         // Reference Navigation Property(OneToMany)
         public FDNP_Group_CC Group { get; set; }
@@ -18,6 +18,7 @@ namespace EFCoreTutorial.Models.ModelsUsingConvention.FullyDefinedNavigationProp
         // Foriegn Key Property
         public int FDNP_Group_CC_Id { get; set; }
 
+        #endregion
 
 
         public FDNP_Point_CC(string name)

@@ -12,17 +12,22 @@ namespace EFCoreTutorial.Models.ModelsUsingConvention.FullyDefinedNavigationProp
         public string Name { get; set; }
 
 
+        #region Process_CC
 
         // Reference Navigation Property(OneToMany)
-        public FDNP_Process_CC Process { get; set; }
+        public FDNP_Process_CC FDNP_Process_CC { get; set; }
 
         // Foriegn Key Property
         public int FDNP_Process_CC_Id { get; set; }
 
+        #endregion
 
+        #region Point_CC
 
         //Collection Navigation Property(OneToMany)
-        public List<FDNP_Point_CC> Points { get; set; }
+        public List<FDNP_Point_CC> PointList { get; set; }
+
+        #endregion
 
 
         public FDNP_Group_CC(string groupName)
@@ -30,7 +35,7 @@ namespace EFCoreTutorial.Models.ModelsUsingConvention.FullyDefinedNavigationProp
             Name = groupName;
             Random random = new Random();
             double pointNumber = random.NextDouble();
-            Points = new List<FDNP_Point_CC>()
+            PointList = new List<FDNP_Point_CC>()
             {
                 new FDNP_Point_CC("FDNP_Point_CC_" + pointNumber),
                 new FDNP_Point_CC("FDNP_Point_CC_" + pointNumber * 2),
@@ -45,7 +50,7 @@ namespace EFCoreTutorial.Models.ModelsUsingConvention.FullyDefinedNavigationProp
 
         public FDNP_Group_CC()
         {
-            Points = new List<FDNP_Point_CC>();
+            PointList = new List<FDNP_Point_CC>();
         }
     }
 }

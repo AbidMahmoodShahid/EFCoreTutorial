@@ -4,14 +4,16 @@ using EFCoreTutorial;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EFCoreTutorial.Migrations
 {
     [DbContext(typeof(EFCoreTutorialContext))]
-    partial class EFCoreTutorialContextModelSnapshot : ModelSnapshot
+    [Migration("20210330141528_FDNP update02")]
+    partial class FDNPupdate02
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

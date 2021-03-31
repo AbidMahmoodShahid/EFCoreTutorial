@@ -49,7 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="FDNP_CC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +59,14 @@
     <ProjectReference Include="..\EFCoreTutorial\EFCoreTutorial.csproj">
       <Project>{dda2f8a0-d900-44b4-a0df-602c041eb142}</Project>
       <Name>EFCoreTutorial</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnitOfWork\UnitOfWork.csproj">
+      <Project>{aee7ae79-24b2-4098-8595-f77b45d1f682}</Project>
+      <Name>UnitOfWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UOWImplementation\UOWImplementation.csproj">
+      <Project>{eed2b5bb-9354-4d02-b22a-d29cbac85fc3}</Project>
+      <Name>UOWImplementation</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
